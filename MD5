@@ -1,0 +1,16 @@
+52bdaeb66db576b6cc382a29a537769f *DESCRIPTION
+5a0cb5eecc7494cf6db165e1a3a24a11 *NAMESPACE
+3bcad9b7c485f2e19533395ec1e2609a *R/CorrR.R
+e52efd182fabb588c15e4a7081148687 *R/ScoreU.R
+7116eee99cdbd1ef591e905c4b1d0573 *R/cv.interep.R
+429e61a92edb8c70ee44105715aa585e *R/dmcp.R
+952b4831e69e03851c01e389c46a4cf0 *R/example.R
+9d3b489d0eea71d2fda246a2e465fe9f *R/interep.R
+8f30042bc1302d3e665c08cb204086c7 *R/reformat.R
+bb63053448f0243cd05f1fb587eea4cb *data/dat.rda
+dedc400072b48e226200bd845f9cbb62 *man/CorrR.Rd
+422edc66f6bef3a2f1aee620cfdd240e *man/cv.interep.Rd
+6da2db32a4902a15aa983d013a61aa0b *man/dat.Rd
+7a5ce8987e090a65f1257a482015dfc2 *man/dmcp.Rd
+57aceab1aba9f0f0e1f84a57196b95d1 *man/interep.Rd
+2932b9e1727697e22d1abf490bed2e6a *man/reformat.Rd
