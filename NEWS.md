@@ -1,3 +1,7 @@
+# interep 0.3.1 [2020-04-19]
+
+* Reference lists have been updated.
+
 # interep 0.3.0 [2019-10-12]
 
 * Solve the valgrind issue.
