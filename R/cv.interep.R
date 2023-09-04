@@ -26,6 +26,9 @@ NULL
 #' @references
 #' Zhou, F., Ren, J., Li, G., Jiang, Y., Li, X., Wang, W.and Wu, C. (2019). Penalized variable selection for Lipid--environment interactions in a longitudinal lipidomics study.
 #' \href{https://www.mdpi.com/2073-4425/10/12/1002/htm}{\emph{Genes}, 10(12), 1002}
+#' 
+#' Zhou, F., Ren, J., Liu, Y., Li, X., Wang, W.and Wu, C. (2022). Interep: An r package for high-dimensional interaction analysis of the repeated measurement data.
+#' \doi{10.3390/genes13030544}{\emph{Genes}, 13(3): 554}
 #'
 #' Zhou, F., Ren, J., Lu, X., Ma, S. and Wu, C. (2020) Gene–Environment Interaction: a Variable Selection Perspective.
 #' \href{https://arxiv.org/abs/2003.02930}{\emph{Epistasis}, Methods in Molecular Biology. Humana Press. (Accepted)}
@@ -49,7 +52,7 @@ NULL
 #' \doi{10.1515/sagmb-2017-0008}{\emph{ Statistical Applications in Genetics and Molecular Biology}, 17(2)}
 #'
 #' Wu, C., Jiang, Y., Ren, J., Cui, Y., Ma, S. (2018). Dissecting gene-environment interactions: A penalized robust approach accounting for hierarchical structures.
-#' \doi{10.1002/sim.7518}{\emph{Statistics in Medicine}, 37:437–456}
+#' \doi{10.1002/sim.7518}{\emph{Statistics in Medicine}, 37: 437–456}
 #'
 #' Ren, J., He, T., Li, Y., Liu, S., Du, Y., Jiang, Y. and Wu, C. (2017). Network-based regularization for high dimensional SNP data in the case–control study of Type 2 diabetes.
 #' \doi{10.1186/s12863-017-0495-5}{\emph{BMC genetics}, 18(1), 44}
@@ -84,16 +87,15 @@ NULL
 
 cv.interep <- function(e, g, y, beta0, lambda1, lambda2, nfolds, corre, pmethod, maxits){
   n=dim(y)[1]
+  k=dim(y)[2]
   q=dim(e)[2]
   p1=dim(g)[2]
   len1=length(lambda1)
   len2=length(lambda2)
-
-  folds=rep(1,n/nfolds)
-  for (i in 2:nfolds) {
-    folds=c(folds,rep(i,n/nfolds))
-  }
-  folds=sample(folds)
+  
+  s <- sample(1:n,n,replace=FALSE)
+  folds <- cut(s,breaks=nfolds,labels=FALSE)
+  
   pred=matrix(0,len1,len2)
   for (i in 1:len1) {
     lam1=lambda1[i]
@@ -120,7 +122,7 @@ cv.interep <- function(e, g, y, beta0, lambda1, lambda2, nfolds, corre, pmethod,
           }
         }
         x.test=scale(x.test)
-        data.test=reformat(y.test, x.test)
+        data.test=reformat(k, y.test, x.test)
         x.test=data.test$x
         y.test=data.test$y
         mu=x.test%*%beta

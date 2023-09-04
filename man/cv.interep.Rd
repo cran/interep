@@ -45,6 +45,9 @@ which is the optimal tuning parameter for individual predictors containing main 
 Zhou, F., Ren, J., Li, G., Jiang, Y., Li, X., Wang, W.and Wu, C. (2019). Penalized variable selection for Lipid--environment interactions in a longitudinal lipidomics study.
 \href{https://www.mdpi.com/2073-4425/10/12/1002/htm}{\emph{Genes}, 10(12), 1002}
 
+Zhou, F., Ren, J., Liu, Y., Li, X., Wang, W.and Wu, C. (2022). Interep: An r package for high-dimensional interaction analysis of the repeated measurement data.
+\doi{10.3390/genes13030544}{\emph{Genes}, 13(3): 554}
+
 Zhou, F., Ren, J., Lu, X., Ma, S. and Wu, C. (2020) Gene–Environment Interaction: a Variable Selection Perspective.
 \href{https://arxiv.org/abs/2003.02930}{\emph{Epistasis}, Methods in Molecular Biology. Humana Press. (Accepted)}
 
@@ -67,7 +70,7 @@ Wu, C., Zhong, P.-S., and Cui, Y. (2018). Additive varying-coefficient model for
 \doi{10.1515/sagmb-2017-0008}{\emph{ Statistical Applications in Genetics and Molecular Biology}, 17(2)}
 
 Wu, C., Jiang, Y., Ren, J., Cui, Y., Ma, S. (2018). Dissecting gene-environment interactions: A penalized robust approach accounting for hierarchical structures.
-\doi{10.1002/sim.7518}{\emph{Statistics in Medicine}, 37:437–456}
+\doi{10.1002/sim.7518}{\emph{Statistics in Medicine}, 37: 437–456}
 
 Ren, J., He, T., Li, Y., Liu, S., Du, Y., Jiang, Y. and Wu, C. (2017). Network-based regularization for high dimensional SNP data in the case–control study of Type 2 diabetes.
 \doi{10.1186/s12863-017-0495-5}{\emph{BMC genetics}, 18(1), 44}
